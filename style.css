@@ -1,71 +1,24 @@
-
 html{
 
-	height:100%;
-	margin:0;
+  height:100%;
+  margin:0;
 }
 
 body{ 
-    height:2000px;
+    height:100%;
     padding-top:100px;
 }
-.container {
-    position: relative;
-    width: 100%;
-}
 
-.image {
-  opacity: 1;
-  display: block;
-  width: 50%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
+body {
+  background: url(https://github.com/ritik17499/eclectica19/blob/master/Family-Quotes-Collage.jpg?raw=true);
 
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.container:hover .image {
-  opacity: 0.3;
-}
-
-.container:hover .middle {
-  opacity: 1;
-}
-
-.text {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
-}
-.bg-image {
-  /* The image used */
-  background-image: url("https://github.com/ritik17499/eclectica19/blob/master/back1.jpg?raw=true");
-  
-  /* Add the blur effect */
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  
-  /* Full height */
-  height: 100%; 
-  
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 
+
+img {
+  display: none;
+}
 #navu {
   overflow: hidden;
   background-color: #333;
