@@ -1,0 +1,106 @@
+.crswrd .board, .crswrd .clue{
+	display: inline-block;
+}
+.crswrd .board{
+	float: left;
+	margin-right: 20px;
+}
+.crswrd .clue{
+	transition: 1s;
+}
+@media(min-width:1000px)
+{
+	.crswrd .clue{
+		font-size: 1.2em;
+	}
+}
+
+.crswrd table
+{
+	border: 3px solid black;
+	border-collapse: collapse;
+	transition: 1s;
+}
+.crswrd table.correct{
+	border-color: green;
+}
+.crswrd table.correct input{
+	background: #b2f5b2;
+}
+
+.crswrd td{
+	padding: 0;
+}
+
+.crswrd input
+{
+	text-align: center;
+	vertical-align: middle;
+	font-family: monospace;
+	color: transparent;
+	text-shadow: 0 0 black;
+	border: 1px solid #000;
+	transition: .2s;
+}
+.crswrd input:focus{
+	outline: 2px solid blue;
+	background: lightblue;
+}
+.crswrd input.wrong
+{
+	border: 1px solid red;
+	background: lightpink;
+}
+.crswrd input.wrong:focus
+{
+	outline: 3px solid blue;
+	background: lightpink;
+}
+.crswrd input.black
+{
+	background: black;
+}
+.crswrd table.correct input.black{
+	background: black;
+}
+
+.crswrd button{
+	display: inline-block;
+	background: #D7CCC8;
+	color: #004D40;
+	border: 3px solid #B0BEC5;
+	border-radius: 5px;
+	font-size: 30px;
+	height: 50px;
+	text-align: center;
+	vertical-align: middle;
+	transition: .3s;
+}
+.crswrd button:hover{
+	color: #4A148C;
+	border-radius: 25px;
+	border-color: #BDBDBD;
+}
+.crswrd button:active{
+	background: #BCAAA4;
+	border-radius: 25px;
+	border-color: #6D4C41;
+}
+
+.crswrd i{
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.crswrd .code{
+	height: max-content;
+}
+.crswrd .across, .crswrd .down{
+	display: inline-block;
+	vertical-align: top;
+	max-width: 60%;
+}
+.crswrd .across{
+	margin-right: 10px;
+}

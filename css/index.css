@@ -1,0 +1,173 @@
+@font-face{
+	font-family: 'Logo';
+	src:  url('fonts/CenturyGothic.ttf') format('truetype');
+}
+/*@font-face{
+	font-family: 'F2';
+	src:  url('fonts/Century Gothic.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'F3';
+	src:  url('fonts/GOTHIC.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'F4';
+	src:  url('fonts/GOTHICB.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'F5';
+	src:  url('fonts/GOTHICB0.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'F6';
+	src:  url('fonts/GOTHICBI.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'F7';
+	src:  url('fonts/GOTHICI.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'F8';
+	src:  url('fonts/Leoscar Sans Serif.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'F9';
+	src:  url('fonts/Leoscar Serif.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'F10';
+	src:  url('fonts/RawengulkSans-094.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'F11';
+	src:  url('fonts/OratorStd.otf') format('opentype');
+}
+@font-face{
+	font-family: 'F12';
+	src:  url('fonts/OratorStd-Slanted.otf') format('opentype');
+}*/
+
+*{
+	/*outline: 1px solid red;*/
+	transition: all .2s;
+}
+body{
+	margin: 0;
+}
+header{
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+#blur, #front{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#front{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#navbar{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-self: flex-start;
+	background: #1a1a1a;
+	width: 100%;
+	/*height: 6em;*/
+}
+#navbar>div{
+	display: flex;
+	flex: 1;
+}
+
+#menu{
+	align-items: center;
+}
+#menu-button{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 5em;
+	height: 3em;
+	padding: .5em 0;
+}
+#menu-button>div{
+	background: #e6e6e6;
+	width: 3.25em;
+	height: .55em;
+}
+#menu-button.open>div{
+	background: #ff3333;
+}
+#menu-button.open>div:first-child{
+	transform: translateY(1.2em)rotate(45deg);
+}
+#menu-button.open>div:nth-child(2){
+	transform: scaleY(0);
+}
+#menu-button.open>div:last-child{
+	transform: translateY(-1.2em)rotate(-45deg);
+}
+#menu-container{
+	height: 0;
+	transform: translateY(-50%)scaleY(0);
+}
+#menu-container.open{
+	transform: translateY(0)scaleY(1);
+}
+#menu-content{
+	background: #171717;
+	color: white;
+	box-shadow: 0 5px 10px 0px #00000099;
+}
+
+#name{
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-family: Logo;
+	font-size: 4.25em;
+	padding: 0 .1em;
+}
+#handle{
+	flex-direction: row-reverse;
+	align-self: center;
+	flex-wrap: wrap;
+	/*background: #1a1a1a;*/
+	text-align: right;
+}
+
+#handle svg{
+	margin: .4em;
+	overflow: visible;
+}
+#handle svg:hover path{
+	fill: #e6e6e6;
+	stroke: white;
+	transform-origin: 50% 50%;
+	transform: rotate(-5deg);
+}
+#handle svg:active path{
+	fill: #fcc;
+	transform-origin: 50% 50%;
+	transform: rotate(10deg);
+}
+#logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+	width: 100%;
+}
+#logo img{
+	width: 30vw;
+	max-width: 300px;
+}
+
+#content, footer{
+	margin: 5px;
+}

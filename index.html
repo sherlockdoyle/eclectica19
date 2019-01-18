@@ -1,62 +1,339 @@
 <!DOCTYPE html>
-<head>
-   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">   
-</head>
-
-
-
-<body>
-<div class="bg-text" id="navu">
-<nav class="navbar navbar-default navbar-fixed-top "  role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">navigation</span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Info</a>
-    </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a >About</a></li>
-        <li><a>sponsor</a></li>
-        <li class="dropdown">
-          <a  class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-          <ul class="dropdown-menu" >
-            <li><a href="#">Downloads</a></li>
-            <li><a href="#">Pics</a></li>
-            <li><a href="#">Story</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Kch bhi</a></li>
-            <li class="divider"></li>
-            <li><a href="#">aur kch bhi</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-    </div>
-  </div>
-</nav>
-<img src="https://gatheredagain.com/wp-content/uploads/2014/02/Family-Quotes-Collage.jpg">
-</div>
-
-<script src="jquery-3.3.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-          <script src="jq.js"></script>
-          <script src="jaja.js"></script>
-         
-
-
-
-</body>
+<html>
+	<head>
+		<title>ECLECTICA</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/index.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<header>
+			<div id="blur">
+				<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<filter id="blurer"><feGaussianBlur stdDeviation="15" /></filter>
+					<image xlink:href="img/background.jpg" filter="url(#blurer)" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"></image>
+					<mask id="masker"></mask>
+					<image xlink:href="img/background.jpg" mask="url(#masker)" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"></image>
+				</svg>
+			</div>
+			<div id="front">
+				<div id="navbar">
+					<div id="menu"><div id="menu-button"><div></div><div></div><div></div></div></div>
+					<div id="name"><span>ECLECTICA</span></div>
+					<div id="handle">
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"><path d="M25 7.57c-9.806 0-19.612.75-21.767 2.253-4.3 3.004-4.3 27.342 0 30.346s39.225 3.004 43.535 0 4.3-27.342 0-30.346C44.613 8.32 34.806 7.57 25 7.57zM20.027 17.7l12.62 7.286-12.62 7.286z" fill="#fff"/></svg>
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"><path d="M49.998 9.497a20.51 20.51 0 0 1-5.89 1.616 10.29 10.29 0 0 0 4.509-5.675 20.51 20.51 0 0 1-6.514 2.489 10.24 10.24 0 0 0-7.486-3.24 10.26 10.26 0 0 0-10.258 10.258 10.22 10.22 0 0 0 .266 2.337C16.1 16.855 8.542 12.77 3.482 6.565 2.57 8.13 2.09 9.9 2.094 11.72c0 3.56 1.8 6.7 4.563 8.54-1.63-.05-3.222-.5-4.646-1.283-.002.043-.002.085-.002.128 0 4.97 3.536 9.116 8.228 10.06a10.28 10.28 0 0 1-2.702.358c-.66 0-1.303-.062-1.93-.183a10.27 10.27 0 0 0 9.583 7.124 20.59 20.59 0 0 1-12.742 4.391c-.827 0-1.645-.05-2.448-.143 4.69 3.014 10.15 4.613 15.726 4.608 18.867 0 29.183-15.63 29.183-29.185 0-.445-.01-.886-.03-1.326a20.89 20.89 0 0 0 5.118-5.311" fill="#fff"/></svg>
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"><path d="M41.35 11.656a3 3 0 0 1-2.998 2.999 3 3 0 0 1-2.998-2.999 3 3 0 0 1 2.998-2.999 3 3 0 0 1 2.998 2.999zM12.163 25.003a12.84 12.84 0 0 0 12.836 12.838c7.084 0 12.836-5.753 12.836-12.838a12.84 12.84 0 0 0-12.836-12.838c-7.094 0-12.836 5.743-12.836 12.838zm21.17 0c0 4.605-3.73 8.335-8.334 8.335s-8.334-3.73-8.334-8.335 3.73-8.335 8.334-8.335 8.334 3.73 8.334 8.335zM8.627 1.308c-1.646.64-3.04 1.494-4.43 2.887C2.803 5.578 1.95 6.98 1.31 8.617.69 10.203.273 12.022.15 14.685s-.152 3.517-.152 10.307L.15 35.3c.122 2.663.55 4.483 1.16 6.068A12.26 12.26 0 0 0 4.196 45.8c1.392 1.393 2.785 2.246 4.43 2.887 1.585.62 3.405 1.037 6.067 1.16S18.2 50 25 50s7.643-.03 10.305-.152 4.482-.55 6.067-1.16c1.646-.64 3.04-1.494 4.43-2.887a12.26 12.26 0 0 0 2.886-4.432c.62-1.586 1.037-3.405 1.16-6.068S50 31.783 50 24.993s-.03-7.644-.152-10.307-.55-4.483-1.16-6.07c-.64-1.637-1.494-3.04-2.876-4.422-1.392-1.393-2.785-2.246-4.43-2.887C39.797.688 37.977.27 35.315.15S31.798-.003 25.01-.003s-7.643.03-10.305.152c-2.673.112-4.492.54-6.077 1.16zM35.1 4.642c2.44.112 3.76.518 4.644.864 1.17.457 2.002.996 2.876 1.87s1.413 1.708 1.87 2.877c.346.884.752 2.206.864 4.645.122 2.633.142 3.426.142 10.104l-.142 10.104c-.112 2.44-.518 3.76-.864 4.645-.457 1.17-.996 2.003-1.87 2.877s-1.707 1.413-2.876 1.87c-.884.346-2.205.752-4.644.864-2.632.122-3.425.142-10.102.142s-7.47-.03-10.102-.142c-2.44-.112-3.76-.518-4.644-.864-1.17-.457-2.002-.996-2.876-1.87s-1.413-1.708-1.87-2.877c-.346-.884-.752-2.206-.864-4.645C4.52 32.474 4.5 31.68 4.5 25.003L4.643 14.9c.112-2.44.518-3.76.864-4.645.457-1.17.996-2.003 1.87-2.877s1.707-1.413 2.876-1.87c.884-.346 2.205-.752 4.644-.864C17.53 4.52 18.322 4.5 25 4.5l10.102.142z" fill="#fff"/></svg>
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"><path d="M16.196 9.658a15.285 15.285 0 0 1 10.316 4.009l-4.37 4.46c-1.577-1.318-3.287-2.255-5.947-2.255-5.032 0-8.965 4.067-8.965 9.1s3.933 9.145 8.965 9.145c4.972 0 7-2.143 8.3-6.082h-8.3v-6.08h14.732c1.025 7.35-2.07 18.38-14.732 18.38-8.47 0-15.36-6.892-15.36-15.36s6.9-15.317 15.36-15.317zm23.83 7.298H43.8v5.315h5.315v3.785H43.8v5.45h-3.785v-5.45h-5.45V22.27h5.45z" fill="#fff" opacity=".96"/></svg>
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"><path d="M26.7 50V30.64h-6.517v-7.548H26.7v-5.565c0-6.458 3.945-9.974 9.707-9.974 2.76 0 5.13.205 5.82.297V14.6h-3.995c-3.133 0-3.74 1.5-3.74 3.674v4.82h7.475L41 30.64h-6.5V50z" fill="#fff"/></svg>
+					</div>
+				</div>
+				<div id="menu-container">
+					<div id="menu-content">vdsvhsvjcxjbkZnk</div>
+				</div>
+				<div id="logo">
+					<img src="img/logo.jpg" alt="Eclectica"/>
+				</div>
+			</div>
+		</header>
+		<div id="content">
+<h2>Old Love</h2>
+<h3>by Jeffrey Archer</h3>
+<p>Some people, it is said, fall in love at first sight but that was not what happened to William Hatchard and Philippa Jameson. They hated each other from the moment they met. This mutual loathing commenced at the first tutorial of their freshmen terms. Both had come up in the early thirties with major scholarships to read English language and literature, William to Merton, Philippa to Somerville. Each had been reliably assured by their schoolteachers that they would be the star pupil of their year.</p>
+<p>Their tutor, Simon Jakes of New College, was both bemused and amused by the ferocious competition that so quickly developed between his two brightest pupils, and he used their enmity skillfully to bring out the best in both of them without ever allowing either to indulge in outright abuse. Philippa, an attractive, slim red-head with a rather high-pitched voice, was the same height as William so she conducted as many of her arguments as possible standing in newly acquired high-heeled shoes, while William, whose deep voice had an air of authority, would always try to expound his opinions from a sitting position. The more intense their rivalry became the harder the one tried to outdo the other. By the end of their first year they were far ahead of their contemporaries while remaining neck and neck with each other. Simon Jakes told the Merton Professor of Anglo-Saxon Studies that he had never had a brighter pair up in the same year and that it wouldn't be long before they were holding their own with him.</p>
+<p>During the long vacation both worked to a gruelling time table, always imagining the other would be doing a little more. They stripped bare Blake, Wordsworth, Coleridge, Shelley, Byron, and only went to bed with Keats. When they returned for the second year, they found that absence had made the heart grow even more hostile; and when they were both awarded alpha plus for their essays on Beowulf, it didn't help. Simon Jakes remarked at New College high table one night that if Philippa Jameson had been born a boy some of his tutorials would undoubtedly have ended in blows.</p>
+<p>"Why don't you separate them?" asked the Dean, sleepily.</p>
+<p>"What, and double my work-load?" said Jakes. "They teach each other most of the time: I merely act as referee."</p>
+<p>Occasionally the adversaries would seek his adjudication as to who was ahead of whom, and so confident was each of being the favoured pupil that one would always ask in the other's hearing. Jakes was far too canny to be drawn; instead he would remind them that the examiners would be the final arbiters. So they began their own subterfuge by referring to each other, just in earshot, as "that silly woman", and "that arrogant man". By the end of their second year they were almost unable to remain in the same room together.</p>
+<p>In the long vacation William took a passing interest in Al Jolson and a girl called Ruby</p>
+<p>while Philippa flirted with the Charleston and a young naval lieutenant from Dartmouth. But when term started in earnest these interludes were never admitted and soon forgotten.</p>
+<p>At the beginning of their third year they both, on Simon Jakes' advice, entered for the Charles Oldham Shakespeare prize along with every other student in the year who was considered likely to gain a First. The Charles Oldham was awarded for an essay on a set aspect of Shakespeare's work, and Philippa and William both realized that this would be the only time in their academic lives that they would be tested against each other in closed competition. Surreptitiously, they worked their separate ways through the entire Shakespearian canon, from Henry VI to Henry VIII, and kept Jakes well over his appointed tutorial hours, demanding more and more refined discussion of more and more obscure points.</p>
+<p>The chosen theme for the prize essay that year was "Satire in Shakespeare". Troilus and Cressida clearly called for the most attention but both found there were nuances in virtually every one of the bard's thirty-seven plays. "Not to mention a gross of sonnets," wrote Philippa home to her father in a rare moment of self-doubt. As the year drew to a close it became obvious to all concerned that either William or Philippa had to win the prize while the other would undoubtedly come second.</p>
+<p>Nevertheless no one was willing to venture an opinion as to who the victor would be. The New College porter, an expert in these matters, opening his usual book for the Charles Oldham, made them both evens, ten to one the rest of the field.</p>
+<p>Before the prize essay submission date was due, they both had to sit their final degree examinations. Philippa and William confronted the examination papers every morning and afternoon for two weeks with an appetite that bordered on the vulgar. It came as no surprise to anyone that they both achieved first class degrees in the final honors school. Rumor spread around the University that the two rivals had been awarded alphas in every one of their nine papers.</p>
+<p>"I would be willing to believe that is the case," Philippa told William. "But I feel I must point out to you that there is a considerable difference between an alpha plus and an Alpha-minus."</p>
+<p>"I couldn't agree with you more," said William. "And when you discover who has won the Charles Oldham, you will know who was awarded less."</p>
+<p>With only three weeks left before the prize essay had to be handed in they both worked twelve hours a day, falling asleep over open text books, dreaming that the other was still beavering away. When the appointed hour came they met in the marble-floored entrance hall of the Examination Schools, sombre in subfusc.</p>
+<p>"Good morning, William, I do hope your efforts will manage to secure a place in the first six." "Thank you, Philippa. If they don't I shall look for the names C. S. Lewis, Nichol Smith, Nevil Coghill, Edmund Blunden, R. W. Chambers and H. W. Garrard ahead of me. There's certainly no one else in the field to worry about."</p>
+<p>"I am only pleased," said Philippa, as if she had not heard his reply, "that you were not seated next to me when I wrote my essay, thus ensuring for the first time in three years that you weren't able to crib from my notes."</p>
+<p>"The only item I have ever cribbed from you, Philippa, was the Oxford to London timetable, and that I discovered later to be out-of-date, which was in keeping with the rest of your efforts."</p>
+<p>They both handed in their twenty-five thousand word essays to the collector's office in the Examination Schools and left without a further word, returning to their respective colleges impatiently to await the result.</p>
+<p>William tried to relax the weekend after submitting his essay, and for the first time in three years he played some tennis, against a girl from St. Anne's, failing to win a game, let alone a set. He nearly sank when he went swimming, and actually did so when punting. He was only relieved that Philippa had not been witness to any of his feeble physical efforts.</p>
+<p>On Monday night after a resplendent dinner with the Master of Merton, he decided to take a walk along the banks of the Cherwell to clear his head before going to bed. The May evening was still light as he made his way down through the narrow confines of Merton Wall, across the meadows to the banks of the Cherwell. As he strolled along the winding path, he thought he spied his rival ahead of him under a tree reading. He considered turning back but decided she might already have spotted him, so he kept on walking.</p>
+<p>He had not seen Philippa for three days although she had rarely been out of his thoughts: once he had won the Charles Oldham, the silly woman would have to climb down from that high horse of hers. He smiled at the thought and decided to walk nonchalantly past her. As he drew nearer, he lifted his eyes from the path in front of him to steal a quick glance in her direction, and could feel himself reddening in anticipation of her inevitable well-timed insult. Nothing happened so he looked more carefully, only to discover on closer inspection that she was not reading: her head was bowed in her hands and she appeared to be sobbing quietly. He slowed his progress to observe, not the formidable rival who had for three years dogged his every step, but a forlorn and lonely creature who looked somewhat helpless.</p>
+<p>William's first reaction was to think that the winner of the prize essay competition had been leaked to her and that he had indeed achieved his victory. On rejection, he realised that could not be the case: the examiners would only have received the essays that morning and as all the assessors read each submission the results could not possibly be forthcoming until at least the end of the week. Philippa did not look up when he reached her side - he was even unsure whether she was aware of his presence. As he stopped to gaze at his adversary William could not help noticing how her long red hair curled just as it touched the shoulder. He sat down beside her but still she did not stir.</p>
+<p>"What's the matter?" he asked. "Is there anything I can do?"</p>
+<p>She raised her head, revealing a face flushed from crying.</p>
+<p>"No, nothing William, except leave me alone. You deprive me of solitude without affording me company."</p>
+<p>William was pleased that he immediately recognised the little literary allusion.</p>
+<p>"What's the matter, Madame de Sevigne?" he asked, more out of curiosity than concern, torn between sympathy and catching her with her guard down.</p>
+<p>It seemed a long time before she replied.</p>
+<p>"My father died this morning," she said finally, as if speaking to herself.</p>
+<p>It struck William as strange that after three years of seeing Philippa almost every day he knew nothing about her home life.</p>
+<p>"And your mother?" he said.</p>
+<p>"She died when I was three. I don't even remember her. My father is-." She paused. "Was a parish priest and brought me up, sacrificing everything he had to get me to Oxford, even the family silver. I wanted so much to win the Charles Oldham for him."</p>
+<p>William put his arm tentatively on Philippa's shoulder.</p>
+<p>"Don't be absurd. When you win the prize, they'll pronounce you the star pupil of the decade. After all, you will have had to beat me to achieve the distinction."</p>
+<p>She tried to laugh. "Of course I wanted to beat you, William, but only for my father."</p>
+<p>"How did he die?"</p>
+<p>"Cancer, only he never let me know."</p>
+<p>He asked me not to go home before the summer term as he felt the break might interfere with my finals and the Charles Oldham. While all the time he must have been keeping me away because he knew if I saw the state he was in that would have been the end of my completing any serious work."</p>
+<p>"Where do you live?" asked William, again surprised that he did not know.</p>
+<p>"Brockenhurst. In Hampshire. I'm going back there tomorrow morning. The funeral's on Wednesday."</p>
+<p>"May I take you?" asked William.</p>
+<p>Philippa looked up and was aware of a softness in her adversary's eyes that she had not seen before. "That would be kind, William."</p>
+<p>"Come on then, you silly woman," he said. "I'll walk you back to your college."</p>
+<p>"Last time you called me 'silly woman' you meant it."</p>
+<p>William found it natural that they should hold hands as they walked along the river bank. Neither spoke until they reached Somerville.</p>
+<p>"What time shall I pick you up?" he asked, not letting go of her hand.</p>
+<p>"I didn't know you had a car."</p>
+<p>"My father presented me with an old MG when I was awarded a first. I have been longing to find some excuse to show the damn thing off to you. It has a press button start, you know."</p>
+<p>"Obviously he didn't want to risk waiting to give you the car on the Charles Oldham results." William laughed more heartily than the little dig merited.</p>
+<p>"Sorry," she said. "Put it down to habit. I shall look forward to seeing if you drive as appallingly as you write, in which case the journey may never come to any conclusion. I'll be ready for you at ten."</p>
+<p>On the journey down to Hampshire, Philippa talked about her father's work as a parish priest and inquired after William's family. They stopped for lunch at a pub in Winchester. Rabbit stew and mashed potatoes.</p>
+<p>"The first meal we've had together," said William.</p>
+<p>No sardonic reply came flying back; Philippa simply smiled.</p>
+<p>After lunch they travelled on to the village of Brockenhurst. William brought his car to an uncertain halt on the gravel outside the vicarage. An elderly maid, dressed in black, answered the door, surprised to see Miss Philippa with a man. Philippa introduced Annie to William and asked her to make up the spare room.</p>
+<p>"I'm so glad you've found yourself such a nice young man," remarked Annie later."Have you known him long?"</p>
+<p>Philippa smiled. "No, we met for the first time yesterday."</p>
+<p>Philippa cooked William dinner, which they ate by a fire he had made up in the front room. Although hardly a word passed between them for three hours, neither was bored. Philippa began to notice the way William's untidy fair hair fell over his forehead and thought how distinguished he would look in old age.</p>
+<p>The next morning, she walked into the church on William's arm and stood bravely through the funeral. When the service was over William took her back to the vicarage, crowded with the many friends the parson had made.</p>
+<p>"You mustn't think ill of us," said Mr. Crump, the vicar's warden, to Philippa. "You were everything to your father and we were all under strict instructions not to let you know about his illness in case it should interfere with the Charles Oldham. That is the name of the prize, isn't it?"</p>
+<p>"Yes," said Philippa. "But that all seems so unimportant now."</p>
+<p>"She will win the prize in her father's memory," said William.</p>
+<p>Philippa turned and looked at him, realising for the first time that he actually wanted her to win the Charles Oldham.</p>
+<p>They stayed that night at the vicarage and drove back to Oxford on the Thursday. On the Friday morning at ten o'clock William returned to Philippa's college and asked the porter if he could speak to Miss Jameson.</p>
+<p>"Would you be kind enough to wait in the Horsebox, sir," said the porter as he showed William into a little room at the back of the lodge and then scurried off to find Miss Jameson. They returned together a few minutes later.</p>
+<p>"What on earth are you doing here?"</p>
+<p>"Come to take you to Stratford."</p>
+<p>"But I haven't even had time to unpack the things I brought back from Brockenhurst."</p>
+<p>"Just do as you are told for once - I'll give you fifteen minutes."</p>
+<p>"Of course," she said. "Who am I to disobey the next winner of the Charles Oldham? I shall even allow you to come up to my room for one minute and help me unpack."</p>
+<p>The porter's eyebrows nudged the edge of his cap but he remained silent, in deference to Miss Jameson's recent bereavement. Again it surprised William to think that he had never been to Philippa's room during their three years. He had climbed the walls of all the women's colleges to be with a variety of girls of varying stupidity but never with Philippa. He sat down on the end of the bed.</p>
+<p>"Not there, you thoughtless creature. The maid has only just made it. Men are all the same, you never sit in chairs."</p>
+<p>"I shall one day," said William. "The chair of English Language and Literature."</p>
+<p>"Not as long as I'm at this University, you won't," she said, as she disappeared into the bathroom.</p>
+<p>"Good intentions are one thing but talent is quite another," he shouted at her retreating back, privately pleased that her competitive streak seemed to be returning.</p>
+<p>Fifteen minutes later she came out of the bathroom in a yellow flowered dress with a neat white collar and matching cuffs. William thought she might even be wearing a touch of make-up.</p>
+<p>"It will do our reputations no good to be seen together," she said.</p>
+<p>"I've thought about that," said William. "If asked, I shall say you're my charity."</p>
+<p>"Your charity?"</p>
+<p>"Yes, this year I'm supporting distressed orphans."</p>
+<p>Philippa signed out of college until midnight and the two scholars travelled down to Stratford, stopping off at Broadway for lunch. In the afternoon they rowed on the River Avon. William warned Philippa of his last disastrous outing in a punt. She admitted that she had already heard of the exhibition he had made of himself, but they arrived safely back at the shore: perhaps because Philippa took over the rowing.</p>
+<p>They went to see John Gielgud playing Romeo and dined at the Dirty Duck. Philippa was even quite rude to William during the meal. They started their journey home just after eleven and Philippa fell into a half sleep as they could hardly hear each other above the noise of the car engine. It must have been about twenty-five miles outside of Oxford that the MG came to a halt.</p>
+<p>"I thought," said William, "that when the petrol gauge showed empty there was at least another gallon left in the tank.&rdquo;</p>
+<p>"You're obviously wrong, and not for the first time, and because of such foresight you'll have to walk to the nearest garage all by yourself &ndash; you needn't imagine that I'm going to keep you company. I intend to stay put, right here in the warmth."</p>
+<p>"But there isn't a garage between here and Oxford," protested William.</p>
+<p>"Then you'll have to carry me. I am far too fragile to walk."</p>
+<p>"I wouldn't be able to manage fifty yards after that sumptuous dinner and all that wine."</p>
+<p>"It is no small mystery to me, William, how you could have managed a first class honours degree in English when you can't even read a petrol gauge."</p>
+<p>"There's only one thing for it," said William. "We'll have to wait for the first bus in the morning."</p>
+<p>Philippa clambered into the back seat and did not speak to him again before falling asleep. William donned his hat, scarf and gloves, crossed his arms for warmth, and touched the tangled red mane of Philippa's hair as she slept. He then took off his coat and placed it so that it covered her.</p>
+<p>Philippa woke first, a little after six, and groaned as she tried to stretch her aching limbs. She then shook William awake to ask him why his father hadn't been considerate enough to buy him a car with a comfortable back seat.</p>
+<p>"But this is the niftiest thing going," said William, gingerly kneading his neck muscles before putting his coat back on.</p>
+<p>"But it isn't going, and won't without petrol," she replied getting out of the car to stretch her legs.</p>
+<p>"But I only let it run out for one reason," said William following her to the front of the car.</p>
+<p>Philippa waited for a feeble punch line and was not disappointed.</p>
+<p>"My father told me if I spent the night with a barmaid then I should simply order an extra pint of beer, but if I spent the night with the vicar's daughter, I would have to marry her."</p>
+<p>Philippa laughed. William, tired, unshaven, and encumbered by his heavy coat, struggled to get down on one knee.</p>
+<p>"What are you doing, William?"</p>
+<p>"What do you think I'm doing, you silly woman. I am going to ask you to marry me."</p>
+<p>"An invitation I am happy to decline, William. If I accepted such a proposal I might end up spending the rest of my life stranded on the road between Oxford and Stratford."</p>
+<p>"Will you marry me if I win the Charles Oldham?"</p>
+<p>"As there is absolutely no fear of that happening I can safely say, yes.</p>
+<p>Now do get off your knee, William, before someone mistakes you for a straying stork."</p>
+<p>The first bus arrived at five-past-seven that Saturday morning and took Philippa and William back to Oxford. Philippa went to her rooms for a long hot bath while William filled a petrol can and returned to his deserted MG. Having completed the task, he drove straight to Somerville and once again asked if he could see Miss Jameson. She came down a few minutes later.</p>
+<p>"What you again?" she said. "Am I not in enough trouble already?"</p>
+<p>"Why so?"</p>
+<p>"Because I was out after midnight, unaccompanied."</p>
+<p>"You were accompanied."</p>
+<p>"Yes, and that's what's worrying them."</p>
+<p>"Did you tell them we spent the night together?"</p>
+<p>"No, I did not. I don't mind our contemporaries thinking I'm promiscuous, but I have strong objections to their believing that I have no taste. Now kindly go away, as I am contemplating the horror of your winning the Charles Oldham and my having to spend the rest of my life with you."</p>
+<p>"You know I'm bound to win, so why don't you come live with me now?"</p>
+<p>"I realise that it has become fashionable to sleep with just anyone nowadays, William, but if this is to be my last weekend of freedom I intend to savour it, especially as I may have to consider committing suicide."</p>
+<p>"I love you."</p>
+<p>"For the last time, William, go away. And if you haven't won the Charles Oldham don't ever show your face in Somerville again."</p>
+<p>William left, desperate to know the result of the prize essay competition. Had he realised how much Philippa wanted him to win he might have slept that night.</p>
+<p>On Monday morning they both arrived early - in the Examination Schools and stood waiting impatiently without speaking to each other, jostled by the other undergraduates of their year who had also been entered for the prize.</p>
+<p>On the stroke of ten the chairman of the examiners, in full academic dress, walking at tortoise-like pace, arrived in the great hall and with a considerable presence at indifference pinned a notice to the board. All the undergraduates who had entered for the prize rushed forward except for William and Philippa who stood alone, aware that it was now too late to influence a result they were both dreading.</p>
+<p>A girl shot out from the melee around the notice board and ran over to Philippa.</p>
+<p>"Well done, Phil. You've won."</p>
+<p>Tears came to Philippa's eyes as she turned towards William.</p>
+<p>"May I add my congratulations," he said quickly, "you obviously deserved the prize."</p>
+<p>"I wanted to say something to you on Saturday."</p>
+<p>"You did, you said if I lost I must never show my face in Somerville again."</p>
+<p>"No, I wanted to say: I do love nothing in the world so well as you, is not that strange?"</p>
+<p>He looked at her silently for a long moment. It was impossible to improve upon Beatrices's reply.</p>
+<p>"As strange as the thing I know not," he said softly.</p>
+<p>A college friend slapped him on the shoulder, took his hand and shook it vigorously. Proxime accessit was obviously impressive in some people's eyes, if not in William's.</p>
+<p>"Well done, William."</p>
+<p>"Second place is not worthy of praise," said William disdainfully.</p>
+<p>"But you won, Billy boy."</p>
+<p>Philippa and William stared at each other.</p>
+<p>"What do you mean?" said William.</p>
+<p>"Exactly what I said. You've won the Charles Oldham."</p>
+<p>Philippa and William ran to the board and studied the notice.</p>
+<p>Charles Oldham Memorial Price</p>
+<p>The examiners felt unable on this occasion to award the prize to one person and have therefore decided that it should be shared by</p>
+<p>They gazed at the notice board in silence for some moments. Finally, Philippa bit her lip and said in a small voice:</p>
+<p>"Well, you didn't do too badly, considering the competition. I'm prepared to honour my undertaking but by this light I take thee for pity."</p>
+<p>William needed no prompting. "I would not deny you, but by this good day I yield upon great persuasion, for I was told you were in a consumption."</p>
+<p>And to the delight of their peers and the amazement of the retreating don, they embraced under the notice board.</p>
+<p>Rumor had it that from that moment on they were never apart for more than a few hours.</p>
+<p>The marriage took place a month later in Philippa's family church at Brockenhurst. "Well, when you think about it," said William's room-mate, "who else could she have married?" The contentious couple started their honeymoon in Athens arguing about the relative significance of Doric and Ionic architecture of which neither knew any more than they had covertly conned from a half-crown tourist guide. They sailed on to Istanbul, where William prostrated himself at the front of every mosque he could find while Philippa stood on her own at the back fuming at the Turks' treatment of women.</p>
+<p>"The Turks are a shrewd race," declared William, "so quick to appreciate real worth."</p>
+<p>"Then why don't you embrace the Moslim religion, William, and I need only be in your presence once a year."</p>
+<p>"The misfortune of birth, a misplaced loyalty and the signing of an unfortunate contract dictate that I spend the rest of my life with you."</p>
+<p>Back at Oxford, with junior research fellowships at their respective colleges, they settled down to serious creative work. William- embarked upon a massive study of word usage in Marlowe and, in his spare moments, taught himself statistics to assist his findings. Philippa chose as her subject the influence of the Reformation on seventeenth-century English writers and was soon drawn beyond literature into art and music.</p>
+<p>She bought herself a spinet and took to playing Dowland and Gibbons in the evening.</p>
+<p>"For Christ's sake," said William, exasperated by the tinny sound, "you won't deduce their religious convictions from their key signatures."</p>
+<p>"More informative than ifs and ends, my dear," she said, imperturbably, "and at night so much more relaxing than pots and pans."</p>
+<p>Three years later, with well-received D. Phils, they moved on, inexorably in tandem, to college teaching fellowships. As the long shadow of fascism fell across Europe, they read, wrote, criticised and coached by quiet firesides in unchanging quadrangles.</p>
+<p>"A rather dull Schools year for me," said William, "but I still managed five firsts from a field of eleven."</p>
+<p>"An even duller one for me," said Philippa, "but somehow I squeezed three firsts out of six, and you won't have to invoke the trinomial theorem, William, to work out that it's an arithmetical victory for me."</p>
+<p>"The chairman of the examiners tells me," said William, "that a greater part of what your pupils say is no more than a recitation from memory."</p>
+<p>"He told me," she retorted, "that yours have to make it up as they go along."</p>
+<p>When they dined together in college the guest list was always quickly filled, and as soon as grace had been said, the sharpness of their dialogue would flash across the candelabra.</p>
+<p>"I hear a rumor, Philippa, that the college doesn't feel able to renew your fellowship at the end of the year?"</p>
+<p>"I fear you speak the truth, William," she replied. "They decided they couldn't renew mine at the same time as offering me yours."</p>
+<p>"Do you think they will ever make you a Fellow of the British Academy, William?"</p>
+<p>"I must say, with some considerable disappointment, never."</p>
+<p>"I am sorry to hear that; why not?"</p>
+<p>"Because when they did invite me, I informed the President that I would prefer to wait to be elected at the same time as my wife."</p>
+<p>Some non-University guests sitting in high table for the first time took their verbal battles seriously; others could only be envious of such love.</p>
+<p>One Fellow uncharitably suggested they rehearsed their lines before coming to dinner for fear it might be thought they were getting on well together. During their early years as young dons, they became acknowledged as the leaders in their respective fields. Like magnets, they attracted the brightest undergraduates while apparently remaining poles apart themselves.</p>
+<p>"Dr. Hatchard will be delivering half these lectures," Philippa announced at the start of the Michaelmas Term of their joint lecture course on Arthurian legend. "But I can assure you it will not be the better half. You would be wise always to check which Dr. Hatchard is lecturing."</p>
+<p>When Philippa was invited to give a series of lectures at Yale, William took a sabbatical so that he could be with her.</p>
+<p>On the ship crossing the Atlantic, Philippa said, "Let's at least be thankful the journey is by sea, my dear, so we can't run out of petrol."</p>
+<p>"Rather let us thank God," replied William, "that the ship has an engine because you would even take the wind out of Cunard's sails."</p>
+<p>The only sadness in their lives was that Philippa could bear William no children, but if anything it drew the two closer together. Philippa lavished quasi-maternal affection on her tutorial pupils and allowed herself only the wry comment that she was spared the probability of producing a child with William's looks and William's brains.</p>
+<p>At the outbreak of war William's expertise with handling words made a move into cipher-breaking inevitable. He was recruited by an anonymous gentleman who visited them at home with a briefcase chained to his wrist. Philippa listened shamelessly at the keyhole while they discussed the problems they had come up against and burst into the room and demanded to be recruited as well.</p>
+<p>"Do you realize that I can complete The Times crossword puzzle in half the time my husband can?"</p>
+<p>The anonymous man was only thankful that he wasn't chained to Philippa. He drafted them both to the Admiralty section to deal with enciphered wireless messages to and from German submarines. The German signal manual was a four-letter code book and each message was reciphered, the substitution table changing daily. William taught Philippa how to evaluate letter frequencies and she applied her new knowledge to modern German texts, coming up with a frequency analysis that was soon used by every code-breaking department in the Commonwealth. Even so breaking the ciphers and building up the master signal book was a colossal task which took them the best part of two years.</p>
+<p>"I never knew your ifs and ends could be so informative," she said admiringly of her own work.</p>
+<p>When the allies invaded Europe husband and wife could together, often break ciphers with no more than half a dozen lines of encoded text to go on.</p>
+<p>"They're an illiterate lot," grumbled William. "They don't encipher their umlauts. They deserve to be misunderstood.'</p>
+<p>"How can you give an opinion when you never dot your i's William?"</p>
+<p>"Because, I consider the dot is redundant and I hope to be responsible for removing it from the English language."</p>
+<p>"Is that to be your major contribution to the scholarship, William, if so I am bound to ask how anyone reading the work of most of our undergraduates' essays would be able to tell the difference between an I and an i."</p>
+<p>"A feeble argument my dear, that if it had any conviction would demand that you put a dot on top of an n so as to be sure it wasn't mistaken for an h."</p>
+<p>"Keep working away at your theories, William, because I intend to spend my energy removing more than the dot and the I from Hitler."</p>
+<p>In May 1945 they dined privately with the Prime Minister and Mrs. Churchill at Number Ten Downing Street.</p>
+<p>"What did the Prime Minister mean when he said to me he could never understand what you were up to?" asked Philippa in the taxi to Paddington Station.</p>
+<p>"The same as when he said to me he knew exactly what you were capable of, I suppose," said William.</p>
+<p>When the Merton Professor of English retired in the early nineteen-fifties the whole University waited to see which Doctor Hatchard would be appointed to the chair.</p>
+<p>"If Council invite you to take the chair," said William, putting his hand through his graying hair, "it will be because they are going to make me Vice-Chancellor."</p>
+<p>"The only way you could ever be invited to hold a position so far beyond your ability would be nepotism, which would mean I was already Vice-Chancellor."</p>
+<p>The General Board, after several hours' discussion of the problem, offered two chairs and appointed William and Philippa full professors on the same day.</p>
+<p>When the Vice-Chancellor was asked why precedent had been broken he replied: "Simple; if I hadn't given them both a chair, one of them would have been after my job."</p>
+<p>That night, after a celebration dinner when they were walking home together along the banks of the Isis across Christ Church Meadows, in the midst of a particularly heated argument about the quality of the last volume of Proust's monumental works, a policeman, noticing the affray, ran over to them and asked:</p>
+<p>"Is everything all right, madam?"</p>
+<p>"No, it is not," William interjected, "this woman has been attacking me for over thirty years and to date the police have done deplorably little to protect me."</p>
+<p>In the late fifties Harold Macmillan invited Philippa to join the board of the IBA.</p>
+<p>"I suppose you'll become what's known as a telly don," said William, "and as the average mental age of those who watch the box is seven you should feel quite at home."</p>
+<p>"Agreed," said Philippa. "Twenty years of living with you has made me fully qualified to deal with infants."</p>
+<p>The chairman of the BBC wrote to William a few weeks later inviting him to join the Board of Governors.</p>
+<p>"Are you to replace 'Hancock's Half Hour' or 'Dick Barton, Special Agent'?" Philippa inquired.</p>
+<p>"I am to give a series of twelve lectures."</p>
+<p>"On what subject, pray?"</p>
+<p>"Genius."</p>
+<p>Philippa flicked through the Radio Times. "I see that 'Genius' is to be viewed at two o'clock on a Sunday morning, which is understandable, as it's when you are at your most brilliant."</p>
+<p>When William was awarded an honorary doctorate at Princeton, Philippa attended the ceremony and sat proudly in the front row.</p>
+<p>"I tried to secure a place at the back," she explained, "but it was filled with sleeping students who had obviously never heard of you."</p>
+<p>"If that's the case, Philippa, I am only surprised you didn't mistake them for one of your tutorial lectures."</p>
+<p>As the years passed many anecdotes, only some of which were apocryphal, passed into the Oxford fabric. Everyone in the English school knew the stories about the "fighting Hatchards". How they spent their first night together. How they jointly won the Charles Oldham. How Phil would complete The Times crossword before Bill had finished shaving. How they were both appointed to professorial chairs on the same day, and worked longer hours than any of their contemporaries as if they still had something to prove, if only to each other. It seemed almost required by the laws of symmetry that they should always be judged equals. Until it was announced in the New Year's Honours that Philippa had been made a Dame of the British Empire.</p>
+<p>"At least our dear Queen has worked out which one of us is truly worthy of recognition," she said over the college dessert.</p>
+<p>"Our dear Queen," said William, selecting the Madeira, "knows only too well how little competition there is in the women's colleges: sometimes one must encourage weaker candidates in the hope that it might inspire some real talent lower down."</p>
+<p>After that, whenever they attended a public function together, Philippa would have the M.C. announce them as Professor William and Dame Philippa Hatchard. She looked forward to many happy years of starting every official occasion one up on her husband, but her triumph lasted for only six months as William received a knighthood in the Queen's Birthday Honours. Philippa feigned surprise at the dear Queen's uncharacteristic lapse of judgment and forthwith insisted on their being introduced in public as Sir William and Dame Philippa Hatchard.</p>
+<p>"Understandable," said William. "The Queen had to make you a Dame first in order that no one should mistake you for a lady. When I married you, Philippa, you were a young fellow, and now I find I'm living with an old Dame."</p>
+<p>"It's no wonder," said Philippa, "that your poor pupils can't make up their minds whether you're homosexual or you simply have a mother fixation. Be thankful that I did not accept Girton's invitation: then you would have been married to a mistress."</p>
+<p>"I always have been, you silly woman."</p>
+<p>As the years passed, they never let up their pretended belief in the other's mental feebleness. Philippa's books, "works of considerable distinction" she insisted, were published by Oxford University Press while William's "works of monumental significance" he declared, were printed at the presses of Cambridge University.</p>
+<p>The tally of newly appointed professors of English they had taught as undergraduates soon reached double figures.</p>
+<p>"If you will count polytechnics, I shall have to throw in Maguire's readership in Kenya," said William.</p>
+<p>"You did not teach the Professor of English at Nairobi," said Philippa. "I did. You taught the Head of State, which may well account for why the University is so highly thought of while the country is in such disarray."</p>
+<p>In the early sixties they conducted a battle of letters in the T.L.S. on the works of Philip Sidney without ever discussing the subject in each other's presence. In the end the editor said the correspondence must stop and adjudicated a draw. They both declared him an idiot.</p>
+<p>If there was one act that annoyed William in old age about Philippa, it was her continued determination each morning to complete The Times crossword before he arrived at the breakfast table. For a time, William ordered two copies of the paper until Philippa filled them both in while explaining to him it was a waste of money.</p>
+<p>One particular morning in June at the end of their final academic year before retirement, William came down to breakfast to find only one space in the crossword left for him to complete. He studied the clue: "Skelton reported that this landed in the soup." He immediately filled in the eight little boxes.</p>
+<p>Philippa looked over his shoulder. "There's no such word, you arrogant man," she said firmly. "You made it up to annoy me." She placed in front of him a very hard-boiled egg.</p>
+<p>"Of course there is, you silly woman; look whym-wham up in the dictionary."</p>
+<p>Philippa checked in the Oxford Shorter among the cookery books in the kitchen, and trumpeted her delight that it was nowhere to be found.</p>
+<p>"My dear Dame Philippa," said William, as if he were addressing a particularly stupid pupil, "you surely cannot imagine because you are old and your hair has become very white that you are a sage. You must understand that the Shorter Oxford Dictionary was cobbled together for simpletons whose command of the English language stretches to no more than one hundred thousand words. When I go to college this morning I shall confirm the existence of the word in the O.E.D. on my desk. Need I remind you that the O.E.D. is a serious work which, with over five hundred thousand words, was designed for scholars like myself?"</p>
+<p>"Rubbish," said Philippa. "When I am proved right, you will repeat this story word for word, including your offensive non-word, at Somerville's Gaudy Feast."</p>
+<p>"And you, my dear, will read the Collected Works of John Skelton and eat humble pie as your first course."</p>
+<p>"We'll ask old Onions along to adjudicate."</p>
+<p>"Agreed."</p>
+<p>"Agreed."</p>
+<p>With that, Sir William picked up his paper, kissed his wife on the cheek and said with an exaggerated sigh, "It's at times like this that I wished I'd lost the Charles Oldham."</p>
+<p>"You did, my dear. It was in the days when it wasn't fashionable to admit a woman had won anything."</p>
+<p>"You won me."</p>
+<p>"Yes, you arrogant man, but I was led to believe you were one of those prizes one could return at the end of the year. And now I find I shall have to keep you, even in retirement."</p>
+<p>"Let us leave it to the Oxford English Dictionary, my dear, to decide the issue the Charles Oldham examiners were unable to determine," and with that he departed for his college.</p>
+<p>"There's no such word," Philippa muttered as he closed the front door.</p>
+<p>Heart attacks are known to be rarer among women than men. When Dame Philippa suffered hers in the kitchen that morning she collapsed on the floor calling hoarsely for William, but he was already out of earshot. It was the cleaning woman who found Dame Philippa on the kitchen floor and ran to fetch someone in authority. The Bursar's first reaction was that she was probably pretending that Sir William had hit her with a frying pan but nevertheless she hurried over to the Hatchards' house in Little Jericho just in case. The Bursar checked Dame Philippa's pulse and called for the college doctor and then the Principal. Both arrived within minutes.</p>
+<p>The Principal and the Bursar stood waiting by the side of their illustrious academic colleague but they already knew what the doctor was going to say.</p>
+<p>"She's dead," he confirmed. "It must have been very sudden and with the minimum of pain." He checked his watch; the time was nine-forty-seven.</p>
+<p>He covered his patient with a blanket and called for an ambulance. He had taken care of Dame Philippa for over thirty years and he had told her so often to slow down that he might as well have made a gramophone record of it for all the notice she took.</p>
+<p>"Who will tell Sir William?" asked the Principal. The three of them looked at each other.</p>
+<p>"I will," said the doctor.</p>
+<p>It's a short walk from Little Jericho to Radcliffe Square. It was a long walk from Little Jericho to Radcliffe Square for the doctor that day. He never relished telling anyone of the death of a spouse but this one was going to be the unhappiest of his career.</p>
+<p>When he knocked on the professor's door, Sir William bade him enter. The great man was sitting at his desk poring over the Oxford Dictionary, humming to himself.</p>
+<p>"I told her, but she wouldn't listen, the silly woman," he was saying to himself and then he turned and saw the doctor standing silently in the doorway.</p>
+<p>"Doctor, you must be my guest at Somerville's Gaudy next Thursday week where Dame Philippa will be eating humble pie. It will be nothing less than game, set, match and championship for me. A vindication of thirty years' scholarship."</p>
+<p>The doctor did not smile, nor did he stir. Sir William walked over to him and gazed at his old friend intently. No words were necessary. The doctor said only, "I'm more sorry than I am able to express," and he left Sir William to his private grief.</p>
+<p>Sir William's colleagues all knew within the hour. College lunch that day was spent in a silence broken only by the Senior Tutor inquiring of the Master if some food should be taken up to the Merton professor.</p>
+<p>"I think not," said the Master. Nothing more was said.</p>
+<p>Professors, Fellows and students alike crossed the front quadrangle in silence and when they gathered for dinner that evening still no one felt like conversation. At the end of the meal the Senior Tutor suggested once again that something should be taken up to Sir William. This time the Master nodded his agreement and a light meal was prepared by the college chef. The Master and the</p>
+<p>Senior Tutor climbed the worn stone steps to Sir William's room and while one held the tray the other gently knocked on the door. There was no reply, so the Master, used to William's ways, pushed the door ajar and looked in.</p>
+<p>The old man lay motionless on the wooden floor in a pool of blood, a small pistol by his side. The two men walked in and stared down. In his right hand, William was holding the Collected Works of John Skelton. The book was opened at The Tunnyng of Elynour Rummyug, and the word "whym- wham" was underlined.</p>
+<p>a 1529, Skelton, E. Rummyag 75</p>
+<p>After the Sarasyns gyse,</p>
+<p>Woth a whym wham, Knyt with a trym tram,</p>
+<p>Uponher brayne pan.</p>
+<p>Sir William, in his neat hand, had written a note in the margin: "Forgive me, but I had to let her know."</p>
+<p>"Know what, I wonder?" said the Master softly to himself as he attempted to remove the book from Sir William's hand, but the fingers were already stiff and cold around it.</p>
+<p>Legend has it that they were never apart for more than a few hours.</p>
+		</div>
+		<footer>
+			
+		</footer>
+		
+		<script>
+			var hdr=document.getElementsByTagName("header")[0], blr=document.getElementById("blur")[0], menuBtn=document.getElementById("menu-button"), menuCnt=document.getElementById("menu-container"), msk=document.getElementById("masker"), x=hdr.offsetLeft, y=hdr.offsetTop;
+			hdr.ontouchmove=function(e)
+			{
+				blurify(e.touches[0].clientX, e.touches[0].clientY);
+			};
+			hdr.onmousemove=function(e)
+			{
+				blurify(e.pageX, e.pageY);
+			};
+			function blurify(cx, cy)
+			{
+				var circ = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+				circ.setAttribute("cx", cx-x);
+				circ.setAttribute("cy", cy-y);
+				circ.setAttribute("r", 50);
+				circ.setAttribute("fill", "white");
+				circ.setAttribute("filter", "url(#blurer)");
+				msk.appendChild(circ);
+				setTimeout(function()
+				{
+					circ.style.opacity = 0;
+					setTimeout(function()
+					{
+						msk.removeChild(circ);
+					}, 500);
+				}, 500);
+			}
+			
+			menuBtn.onclick=function()
+			{
+				menuBtn.classList.toggle("open");
+				menuCnt.classList.toggle("open");
+			};
+		</script>
+	</body>
 </html>
+

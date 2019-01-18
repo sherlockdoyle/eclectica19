@@ -1,0 +1,44 @@
+.sudoku-table
+{
+	border: 5px solid black;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+	transition: 1s;
+}
+.sudoku-table.correct{
+	border-color: green;
+}
+.sudoku-table.correct input{
+	background: #b2f5b2;
+}
+.sudoku-table td{
+	padding: 0;
+}
+.sudoku-table input
+{
+	text-align: center;
+	vertical-align: middle;
+	font-size: 50px;
+	font-family: monospace;
+	color: transparent;
+	text-shadow: 0 0 black;
+	border: 1px solid #000;
+	width: 50px;
+	height: 50px;
+	transition: .2s;
+}
+.sudoku-table input.wrong
+{
+	border: 1px solid red;
+	background: lightpink;
+}
+.sudoku-table input:focus{
+	outline: 2px solid blue;
+	background: lightblue;
+}
+.sudoku-table input.wrong:focus
+{
+	outline: 3px solid blue;
+	background: lightpink;
+}

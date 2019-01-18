@@ -1,0 +1,105 @@
+.content {
+	
+}
+
+.page-view{
+}
+
+.page{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	min-width: 98vw;
+	min-height: 100vh;
+	background-image: linear-gradient(to bottom right, #e6e6e6, #e6e6e6, #ff9999);
+	vertical-align: middle;
+}
+
+.page .name{
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	font-size: 30px;
+}
+
+.writeup{
+	font-size: 5em;
+	text-align: center;
+}
+
+.crswrd, .sudoku{
+	margin: 20px;
+}
+
+.one{
+	z-index: 1;
+	margin-top: 75vh;
+}
+
+.two{
+	z-index: 2;
+	margin-top: 50vh;
+}
+
+.three{
+	z-index: 3;
+}
+
+.return{
+	display: block;
+	position: relative;
+	top: 15px;
+	left: 15px;
+	width: 100px;
+	height: 100px;
+	margin: 0;
+	border-radius: 50%;
+	background: radial-gradient(circle at 50% 120%,  #323232, #0a0a0a 80%, #000000 100%);
+	z-index: 99;
+	transition: .3s;
+}
+.return:before {
+	content: "";
+	position: absolute;
+	background: radial-gradient(circle at 50% 120%,  rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 70%);
+	border-radius: 50%;
+	bottom: 2.5%;
+	left: 5%;
+	opacity: 0.6;
+	height: 100%;
+	width: 90%;
+	-webkit-filter: blur(5px);
+	z-index: 2;
+}
+.return:after {border: 1px solid red;
+	width: 100%;
+	height: 100%;
+	content: "";
+	position: absolute;
+	top: 5%;
+	left: 10%;
+	border-radius: 50%;
+	background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1) 14%, rgba(255, 255, 255, 0) 24%);
+	-webkit-transform: translateX(-20px) translateY(-23px) skewX(-20deg);
+	transform: translateX(-20px) translateY(-23px) skewX(-20deg);
+	-webkit-filter: blur(10px);
+}
+
+
+.return span{
+	display: inline-block;
+	border: solid white;
+	border-width: 0 5px 5px 0;
+	padding: 15px;
+	box-shadow: #585555 8px 10px 5px;
+	transform: translateX(17px) translateY(-15px) skewX(15deg) skewY(2deg) translate(42px, 32px) rotate(135deg);
+	-webkit-transform: translateX(17px) translateY(-15px) skewX(15deg) skewY(2deg) translate(42px, 32px) rotate(135deg);
+	transition: .3s;
+}
+.return:hover span{
+	-webkit-transform: translate(42px, 32px) rotate(135deg);
+}
+.return:active span{
+	-webkit-transform: translateX(-17px) translateY(8px) skewX(15deg) skewY(-10deg) scale(0.95) translate(42px, 32px) rotate(135deg);
+}
