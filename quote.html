@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Quote</title>
+		<style>
+			@keyframes move-eye-skew{
+/*				0%{
+					transform: none;
+				}
+				10%, 45% {
+					transform: translateX(68px) translateY(30px) skewX(-15deg) skewY(10deg) scale(0.95);
+				}
+				55%, 65% {
+					transform: none;
+				}
+				70%, 85% {
+					transform: translateX(-68px) translateY(-40px) skewX(-5deg) skewY(-2deg) scaleX(0.95);
+				}
+				90%, 100% {
+					transform: none;
+				}*/
+				0%, 15% {
+					transform: translateX(-68px) translateY(-40px) skewX(-5deg) skewY(-2deg) scaleX(0.95);
+				}
+				20%, 30% {
+					transform: none;
+				}
+				40%, 75% {
+					transform: translateX(68px) translateY(30px) skewX(-15deg) skewY(10deg) scale(0.95);
+				}
+				85%, 95% {
+					transform: none;
+				}
+				100% {
+					transform: translateX(-68px) translateY(-40px) skewX(-5deg) skewY(-2deg) scaleX(0.95);
+				}
+			}
+
+			.eye {
+					display: inline-block;
+					width: 100%;
+					height: 100%;
+					margin: 0;
+					border-radius: 50%;
+					position: relative;
+					background: radial-gradient(circle at 50% 40%, #FAFAFA, #EEEEEE 66%, #795548 100%);
+					box-shadow: -5px -10px 50px 0px white;
+			}
+			.eye:after {
+				content: "";
+				position: absolute;
+				top: 5%;
+				left: 10%;
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 14%, rgba(255, 255, 255, 0) 24%);
+				transform: translateX(40px) translateY(-90px) skewX(20deg);
+			}
+
+			.iris {
+				width: 40%;
+				height: 40%;
+				margin: 30%;
+				border-radius: 50%;
+				background: radial-gradient(circle at 50% 50%, #0097A7 0%, #64B5F6 30%, #5C6BC0 100%);
+				transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
+				position: absolute;
+				animation: move-eye-skew 5s ease-out infinite;
+			}
+			.iris:before {
+				content: "";
+				display: block;
+				position: absolute;
+				width: 37.5%;
+				height: 37.5%;
+				border-radius: 50%;
+				top: 31.25%;
+				left: 31.25%;
+				background: black;
+			}
+			.iris:after {
+				content: "";
+				display: block;
+				position: absolute;
+				width: 31.25%;
+				height: 31.25%;
+				border-radius: 50%;
+				top: 18.75%;
+				right: 18.75%;
+				background: rgba(255, 255, 255, 0.2);
+			}
+
+			.eye .shadow {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1) 45%, rgba(0, 0, 0, 0) 50%);
+				transform: rotateX(85deg) translateZ(-150px);
+				z-index: -1;
+			}
+			.name {
+				position: absolute;
+				font-size: 50px;
+				text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+			}
+			.stage {
+				width: 300px;
+				height: 300px;
+				top: 25px;
+				left: 150px;
+				position: absolute;
+			}
+			.qot {
+				position: absolute;
+				left: 385px;
+				top: 205px;
+				font-size: 40px;
+			}
+			.qot .quote{
+				position: absolute;
+				width: 80%;
+				height: 80%;
+				top:10%;
+				left: 10%;
+				text-align: center;
+				display: flex;
+				justify-content:center;
+				flex-direction:column;
+				mix-blend-mode: color-burn;
+			}
+			.qCont{
+				height: 400px;
+				background: linear-gradient(to bottom right, rgba(97, 97, 97, 0.2) 0%, rgba(255, 255, 255, 0.5) 40%, #ffffff 100%);
+			}
+
+		</style>
+    </head>
+    <body>
+		<div class="qCont">
+			<div class="qot">
+				<img src="quotes/images/default.png" alt=""/>
+				<div class="quote">That awesome quote</div>
+			</div>
+			<div class="stage">
+				<div class="eye">
+					<div class="shadow"></div>
+					<div class="iris"></div>
+				</div>
+			</div>
+			<div class="name">Thought for<br>the day</div>
+		</div>
+		<script>
+			var dt=new Date(), dd = dt.getDate(), mm = dt.getMonth()+1, yyyy = dt.getFullYear();
+			if(dd<10)
+				dd = '0'+dd;
+			if(mm<10)
+				mm = '0' + mm;
+			var date = ""+dd+mm+yyyy;
+			var xhrh=new XMLHttpRequest();
+			xhrh.open("GET", "quotes/data.json");//need PHP for efficiency
+			xhrh.onreadystatechange=function()
+			{
+				if(xhrh.readyState===4 && xhrh.status===200)
+				{
+					var data=JSON.parse(xhrh.responseText), qot=data[date];
+					if(qot)
+					{
+						var img=document.querySelectorAll(".qCont .qot img")[0];
+						img.onload=function()
+						{
+							var p=document.querySelectorAll(".qCont .qot")[0];
+							document.getElementsByClassName("qCont")[0].style.width=p.offsetLeft+p.offsetWidth+"px";
+						};
+						img.src="quotes/images/"+qot[1];
+						document.querySelectorAll(".qCont .qot .quote")[0].innerHTML=qot[0];
+					}
+				}
+			};
+			try
+			{
+				xhrh.send(null);
+			}
+			catch(e){}
+		</script>
+    </body>
+</html>

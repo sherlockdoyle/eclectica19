@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.cont{
+				border: 1px solid black;
+				margin: 10px;
+			}
+			div, span, div:after, div:before, span:after, span:before{
+				transition: 1s;
+			}
+
+			#trig{
+				width: 0;
+				height: 0;
+			}
+			#trig span{
+				display: inline-block;
+				color: red;
+				width: 20px;
+				height: 20px;
+				text-align: center;
+				vertical-align: middle;
+			}
+			.up{
+				border-left: 50px solid transparent;
+				border-right: 50px solid transparent;
+				border-bottom: 50px solid black;
+				border-top: 0 solid transparent;
+			}
+			.up span{
+				transform: translate(-10px, 20px);
+			}
+			.right{
+				border-top: 50px solid transparent;
+				border-bottom: 50px solid transparent;
+				border-left: 50px solid black;
+				border-right: 0 solid transparent;
+			}
+			.right span{
+				transform: translate(-40px, -10px);
+			}
+			.down{
+				border-left: 50px solid transparent;
+				border-right: 50px solid transparent;
+				border-top: 50px solid black;
+				border-bottom: 0 solid transparent;
+			}
+			.down span{
+				transform: translate(-10px, -40px);
+			}
+			.left{
+				border-top: 50px solid transparent;
+				border-bottom: 50px solid transparent;
+				border-right: 50px solid black;
+				border-left: 0 solid transparent;
+			}
+			.left span{
+				transform: translate(20px, -10px);
+			}
+
+			.fb{
+				background: #3b5998;
+				width: 100px;
+				height: 110px;
+				box-sizing: content-box;
+				border-radius: 5px;
+				position: relative;
+				overflow: hidden;
+				border: 15px solid #3b5998;
+				border-bottom: 0 solid #3b5998;
+			}
+			.fb:before{
+				content: "";
+				position: absolute;
+				background: #3b5998;
+				width: 40px;
+				height: 90px;
+				top: 10px;
+				bottom: -35px;
+				right: -37px;
+				border: 20px solid white;
+				border-radius: 25px;
+				box-sizing: content-box;
+				transform: rotate(0deg);
+			}
+			.fb:after {
+				content: "";
+				position: absolute;
+				width: 55px;
+				top: 50px;
+				height: 20px;
+				background: white;
+				right: 5px;
+				box-sizing: content-box;
+			}
+			.twt{
+				background: #55abee;
+				width: 83px;
+				height: 110px;
+				box-sizing: content-box;
+				border-radius: 5px;
+				position: relative;
+				overflow: hidden;
+				border: 15px solid #55abee;
+				border-right-width: 32px;
+				border-bottom: 0 solid #55abee;
+			}
+			.twt:before{
+				content: "";
+				position: absolute;
+				background: #55abee;
+				width: 40px;
+				height: 90px;
+				top: -30px;
+				bottom: 30px;
+				right: -37px;
+				border: 20px solid white;
+				border-radius: 25px;
+				box-sizing: content-box;
+				transform: rotate(0deg);
+			}
+			.twt:after {
+				content: "";
+				position: absolute;
+				width: 55px;
+				top: 25px;
+				height: 20px;
+				background: white;
+				right: 5px;
+				box-sizing: content-box;
+			}
+			.srch {
+				background: transparent;
+				width: 100px;
+				height: 100px;
+				box-sizing: content-box;
+				border-radius: 88px;
+				position: relative;
+				border: 20px solid #f44336;
+			}
+			.srch:before {
+				content: "";
+				position: absolute;
+				background: #f44336;
+				width: 88px;
+				height: 20px;
+				top: 113px;
+				bottom: -25px;
+				right: -63px;
+				border: 0 solid transparent;
+				border-radius: 0;
+				box-sizing: content-box;
+				transform: rotate(45deg);
+			}
+			.srch:after{
+				content: "";
+				position: absolute;
+				width: 0;
+				top: 0;
+				height: 0;
+				background: transparent;
+				right: 0;
+				box-sizing: content-box;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="cont">
+			<div id="trig" class="up"><span>Hi</span></div>
+			<button onclick="chng('trig', 'up')">Up</button>
+			<button onclick="chng('trig', 'right')">Right</button>
+			<button onclick="chng('trig', 'down')">Down</button>
+			<button onclick="chng('trig', 'left')">Left</button>
+		</div>
+		<div class="cont">
+			<div id="sn" class="fb"></div>
+			<button onclick="chng('sn', 'fb')">Facebook</button>
+			<button onclick="chng('sn', 'twt')">Twitter</button>
+			<button onclick="chng('sn', 'srch')">Search</button>
+		</div>
+		<script>
+			function chng(id, cls)
+			{
+				document.getElementById(id).className=cls;
+			}
+		</script>
+	</body>
+</html>

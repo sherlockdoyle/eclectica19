@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Puzzle</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/puzzle.css" rel="stylesheet" type="text/css"/>
+		<link href="css/crswrd.css" rel="stylesheet" type="text/css"/>
+		<link href="css/sudoku.css" rel="stylesheet" type="text/css"/>
+		<script src="js/rellax.js" type="text/javascript"></script>
+		<script src="js/crswrd.js" type="text/javascript"></script>
+		<script src="js/sudoku.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="page-view">
+			<div class="page three" data-rellax-speed="22">
+				<div class="writeup">Lorem Ipsum would be the awesome writeup.</div>
+			</div>
+			<div class="page two" data-rellax-speed="1">
+				<span class="name">Crossword</span>
+				<div id="crswrd" class="crswrd"></div>
+			</div>
+			<div class="page one" data-rellax-speed="-9.53">
+				<span class="name">Sudoku</span>
+				<div id="sudoku" class="sudoku"></div>
+			</div>
+		</div>
+		<a class="return" href="../"><span></span></a>
+		<script>
+			if(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent))
+			{
+				var cl=["one", "two", "three"];
+				for(var i=0; i<3; i++)
+					document.getElementsByClassName(cl[i])[0].classList.remove(cl[i]);
+			}
+			else
+				new Rellax('.page');
+			crswrd(document.getElementById("crswrd"));
+			sudoku(document.getElementById("sudoku"));
+		</script>
+	</body>
+</html>
